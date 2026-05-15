@@ -1,24 +1,43 @@
-# README
+# 🚀 Portfolio V2
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Modern futuristic developer portfolio built with Ruby on Rails.
 
-Things you may want to cover:
+This project focuses on backend, full stack development and industrial-tech visual design.
 
-* Ruby version
+---
 
-* System dependencies
+## 🛠 Technologies Used
 
-* Configuration
+- Ruby on Rails
+- HTML5
+- CSS3
+- JavaScript
+- PostgreSQL
+- Docker
+- Linux
 
-* Database creation
+---
 
-* Database initialization
+## ✨ Features
 
-* How to run the test suite
+- Futuristic UI
+- Responsive design
+- Animated sections
+- Backend structure with Rails
+- Modern developer portfolio
+- Industrial-tech inspired design
 
-* Services (job queues, cache servers, search engines, etc.)
+---
 
-* Deployment instructions
+## 🚧 Project Status
 
-* ...
+Currently under development.
+
+---
+
+## 👨‍💻 Author
+
+Livan Passos
+
+- LinkedIn: https://linkedin.com/in/livanpassos
+- Portfolio: https://livanpassos.com

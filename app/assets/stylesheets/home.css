@@ -213,16 +213,34 @@ body {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+
+  gap: 35px;
+
+  align-items: stretch;
 }
 
 .project-card {
+
+  
   background: #11182b;
+
   border: 1px solid #1d2945;
-  border-radius: 20px;
-  padding: 40px;
-  transition: 0.3s;
+
+  border-radius: 22px;
+
+  padding: 20px;
+
+  min-height: 360px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  transition: all .35s ease;
 }
 
 .project-card:hover {
@@ -233,7 +251,7 @@ body {
 
 .project-card h3 {
   font-size: 30px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   color: white;
 }
 
@@ -241,13 +259,58 @@ body {
   color: #b5bdd1;
   font-size: 18px;
   line-height: 1.8;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
-.project-card span {
-  color: #00ff9d;
-  font-size: 15px;
-  font-weight: bold;
+.project-image {
+  width: 100%;
+  height: 180px;
+
+  border-radius: 16px;
+  overflow: hidden;
+
+  margin-bottom: 30px;
+
+  border: 1px solid #1d2945;
+
+  background: #11182b;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform .35s ease;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-stack {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.project-stack span {
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  background: rgba(0,255,174,.08);
+
+  border: 1px solid rgba(0,255,174,.18);
+
+  color: #00ffae;
+
+  font-size: 14px;
+
+  font-weight: 600;
 }
 
 .contact-section {
@@ -357,7 +420,7 @@ body {
   .about-content p,
   .project-card p,
   .contact-section p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.8;
   }
 
@@ -588,4 +651,46 @@ body {
   font-size: 14px;
 }
 
+.project-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+}
 
+.project-btn {
+  padding: 10px 18px;
+  border-radius: 20px;
+
+  background: #00ffae;
+  color: #050816;
+
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+
+  transition: .3s;
+}
+
+.project-btn:hover {
+  transform: translateY(-3px);
+}
+
+.project-btn.secondary {
+  background: transparent;
+  color: white;
+  border: 1px solid #233252;
+}
+
+.project-btn.secondary:hover {
+  border-color: #00ffae;
+  color: #00ffae;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.project-image img{
+    box-shadow:
+      0 15px 35px rgba(0,0,0,.35);
+}

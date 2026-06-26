@@ -1,0 +1,39 @@
+<div class="project-card">
+
+  <% if local_assigns[:image] %>
+    <div class="project-image">
+      <%= image_tag image, alt: title %>
+    </div>
+  <% end %>
+
+  <div class="project-content">
+
+    <h3><%= title %></h3>
+
+    <p><%= description %></p>
+
+    <div class="project-stack">
+      <% technologies.each do |tech| %>
+        <span><%= tech %></span>
+      <% end %>
+    </div>
+
+    <% if local_assigns[:demo] || local_assigns[:github] %>
+      <div class="project-links">
+
+        <% if local_assigns[:demo] %>
+          <%= link_to "Live Demo", demo, class: "project-btn" %>
+        <% end %>
+
+        <% if local_assigns[:github] %>
+          <%= link_to "GitHub", github,
+              class: "project-btn secondary",
+              target: "_blank" %>
+        <% end %>
+
+      </div>
+    <% end %>
+
+  </div>
+
+</div>

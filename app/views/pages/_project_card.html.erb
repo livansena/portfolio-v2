@@ -1,38 +1,41 @@
 <div class="project-card">
 
-  <% if local_assigns[:image] %>
+  <% if project.image.attached? %>
     <div class="project-image">
-      <%= image_tag image, alt: title %>
+      <%= image_tag project.image, alt: project.title %>
     </div>
   <% end %>
 
   <div class="project-content">
 
-    <h3><%= title %></h3>
+    <h3><%= project.title %></h3>
 
-    <p><%= description %></p>
+    <p><%= project.description %></p>
 
-    <div class="project-stack">
-      <% technologies.each do |tech| %>
-        <span><%= tech %></span>
-      <% end %>
-    </div>
-
-    <% if local_assigns[:demo] || local_assigns[:github] %>
-      <div class="project-links">
-
-        <% if local_assigns[:demo] %>
-          <%= link_to "Live Demo", demo, class: "project-btn" %>
+    <% if project.technologies.any? %>
+      <div class="project-stack">
+        <% project.technologies.each do |tech| %>
+          <span><%= tech.name %></span>
         <% end %>
-
-        <% if local_assigns[:github] %>
-          <%= link_to "GitHub", github,
-              class: "project-btn secondary",
-              target: "_blank" %>
-        <% end %>
-
       </div>
     <% end %>
+
+    <div class="project-links">
+
+      <% if project.demo_url.present? %>
+        <%= link_to "Live Demo",
+              project.demo_url,
+              class: "project-btn" %>
+      <% end %>
+
+      <% if project.github_url.present? %>
+        <%= link_to "GitHub",
+              project.github_url,
+              class: "project-btn secondary",
+              target: "_blank" %>
+      <% end %>
+
+    </div>
 
   </div>
 

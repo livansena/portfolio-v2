@@ -1,0 +1,44 @@
+<h1>Technologies</h1>
+
+<p>
+  <%= link_to "➕ New Technology", new_admin_technology_path %>
+</p>
+
+<table border="1" cellpadding="10">
+
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% @technologies.each do |technology| %>
+
+      <tr>
+
+        <td><%= technology.name %></td>
+
+        <td>
+
+          <%= link_to "Edit",
+              edit_admin_technology_path(technology) %> |
+
+          <%= link_to "Delete",
+              admin_technology_path(technology),
+              data: {
+                turbo_method: :delete,
+                turbo_confirm: "Are you sure?"
+              } %>
+
+        </td>
+
+      </tr>
+
+    <% end %>
+
+  </tbody>
+
+</table>

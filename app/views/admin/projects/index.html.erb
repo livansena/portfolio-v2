@@ -1,0 +1,58 @@
+<h1>Projects</h1>
+
+<p>
+  <%= link_to "➕ New Project", new_admin_project_path %>
+</p>
+
+<table border="1" cellpadding="10">
+
+  <thead>
+    <tr>
+      <th>Image</th>
+      <th>Position</th>
+      <th>Title</th>
+      <th>Featured</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% @projects.each do |project| %>
+
+      <tr>
+
+        <td>
+          <% if project.image.attached? %>
+            <%= image_tag project.image,
+                  width: 120,
+                  style: "border-radius:10px;" %>
+          <% else %>
+            No image
+          <% end %>
+        </td>
+
+        <td><%= project.position %></td>
+
+        <td><%= project.title %></td>
+
+        <td><%= project.featured ? "Yes" : "No" %></td>
+
+        <td>
+          <%= link_to "Edit", edit_admin_project_path(project) %> |
+
+          <%= link_to "Delete",
+                admin_project_path(project),
+                data: {
+                  turbo_method: :delete,
+                  turbo_confirm: "Are you sure?"
+                } %>
+        </td>
+
+      </tr>
+
+    <% end %>
+
+  </tbody>
+
+</table>

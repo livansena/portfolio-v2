@@ -10,41 +10,11 @@
 
   <div class="projects-grid">
 
-    <%= render "project_card",
-      title: "Passos Tech Tools",
-      description: "SaaS platform for industrial asset management, preventive maintenance and work order tracking built with Ruby on Rails.",
-      image: "passos-tech-tools-dashboard.png",
-      technologies: [
-        "Ruby on Rails",
-        "PostgreSQL",
-        "Docker"
-      ],
-      demo: "#",
-      github: "#" %>
+    <% @projects.each do |project| %>
 
-    <%= render "project_card",
-      title: "Sports Scoreboard",
-      description: "Football league management platform featuring automatic standings calculation, match scheduling and real-time score management.",
-      image: "sports-scoreboard.png",
-      technologies: [
-        "Ruby on Rails",
-        "PostgreSQL",
-        "Tailwind CSS"
-      ],
-      demo: "#",
-      github: "#" %>
+      <%= render "project_card", project: project %>
 
-    <%= render "project_card",
-      title: "NASA Dashboard",
-      description: "Interactive dashboard consuming NASA's APOD API to display daily astronomy images with a clean and responsive interface.",
-      image: "nasa-dashboard.png",
-      technologies: [
-        "Node.js",
-        "REST API",
-        "Docker"
-      ],
-      demo: "#",
-      github: "#" %>
+    <% end %>
 
   </div>
 

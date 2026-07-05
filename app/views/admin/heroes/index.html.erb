@@ -1,0 +1,50 @@
+<h1>Hero CMS</h1>
+
+<table border="1" cellpadding="10">
+
+  <thead>
+
+    <tr>
+      <th>Hero Tag</th>
+      <th>Title</th>
+      <th>Highlight</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+
+  </thead>
+
+  <tbody>
+
+    <% @heroes.each do |hero| %>
+
+      <tr>
+
+        <td>
+          <%= hero.hero_tag %>
+        </td>
+
+        <td>
+          <%= hero.title_line_1 %><br>
+          <%= hero.title_line_2 %>
+        </td>
+
+        <td>
+          <%= hero.title_highlight %>
+        </td>
+
+        <td>
+          <%= hero.status.capitalize %>
+        </td>
+
+        <td>
+          <%= link_to "Edit", edit_admin_hero_path(hero) %>
+        </td>
+
+      </tr>
+
+    <% end %>
+
+  </tbody>
+
+</table>

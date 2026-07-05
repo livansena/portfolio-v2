@@ -2,7 +2,16 @@ Rails.application.routes.draw do
   root "pages#home"
 
   namespace :admin do
-    resources :projects
+    resources :heroes
+
+    resources :abouts, except: [:new, :create, :destroy]
+
+    resources :projects do
+      member do
+        delete :remove_image
+      end
+    end
+
     resources :technologies
   end
 

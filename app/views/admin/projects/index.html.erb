@@ -11,6 +11,8 @@
       <th>Image</th>
       <th>Position</th>
       <th>Title</th>
+      <th>Slug</th>
+      <th>Technologies</th>
       <th>Featured</th>
       <th>Actions</th>
     </tr>
@@ -36,7 +38,36 @@
 
         <td><%= project.title %></td>
 
-        <td><%= project.featured ? "Yes" : "No" %></td>
+          <td>
+  <code><%= project.slug %></code>
+</td>
+
+        <td>
+
+      <%= project.technologies.map(&:name).join(" • ") %>
+
+        </td>
+
+        <td>
+
+  <% if project.featured? %>
+
+    <span style="
+      color:#00f5b4;
+      font-weight:bold;
+    ">
+      ★ Featured
+    </span>
+
+  <% else %>
+
+    <span style="color:#888;">
+      —
+    </span>
+
+  <% end %>
+
+</td>
 
         <td>
           <%= link_to "Edit", edit_admin_project_path(project) %> |

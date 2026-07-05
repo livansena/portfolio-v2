@@ -1,19 +1,24 @@
 class Admin::ProjectsController < ApplicationController
 
   def index
-    @projects = Project.order(:position)
-  end
+  @projects = Project
+                .includes(:technologies, image_attachment: :blob)
+                .order(:position)
+end
 
   def new
     @project = Project.new
+    @technologies = Technology.order(:name)
   end
 
   def edit
     @project = Project.find(params[:id])
+    @technologies = Technology.order(:name)
   end
 
   def create
     @project = Project.new(project_params)
+    @technologies = Technology.order(:name)
 
     if @project.save
       redirect_to admin_projects_path, notice: "Project created successfully."
@@ -23,20 +28,30 @@ class Admin::ProjectsController < ApplicationController
   end
 
   def update
-  @project = Project.find(params[:id])
+    @project = Project.find(params[:id])
+    @technologies = Technology.order(:name)
 
-  if @project.update(project_params)
-    redirect_to admin_projects_path, notice: "Project updated successfully."
-  else
-    render :edit, status: :unprocessable_entity
+    if @project.update(project_params)
+      redirect_to admin_projects_path, notice: "Project updated successfully."
+    else
+      render :edit, status: :unprocessable_entity
     end
   end
 
-def destroy
-  @project = Project.find(params[:id])
-  @project.destroy
+  def destroy
+    @project = Project.find(params[:id])
+    @project.destroy
 
-  redirect_to admin_projects_path, notice: "Project deleted successfully."
+    redirect_to admin_projects_path, notice: "Project deleted successfully."
+  end
+
+  def remove_image
+  @project = Project.find(params[:id])
+
+  @project.image.purge if @project.image.attached?
+
+  redirect_to edit_admin_project_path(@project),
+              notice: "Image removed successfully."
 end
 
   private
@@ -50,7 +65,8 @@ end
       :github_url,
       :demo_url,
       :featured,
-      :position
+      :position,
+      technology_ids: []
     )
   end
 

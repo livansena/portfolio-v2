@@ -1,5 +1,35 @@
 <%= form_with model: [:admin, @project] do |form| %>
 
+  <% if @project.errors.any? %>
+
+  <div style="
+      background:#3b1111;
+      color:#ffb4b4;
+      border:1px solid #a94442;
+      padding:18px;
+      border-radius:10px;
+      margin-bottom:25px;
+  ">
+
+    <h3>
+      <%= pluralize(@project.errors.count, "error") %>
+      prevented this project from being saved:
+    </h3>
+
+    <ul>
+
+      <% @project.errors.full_messages.each do |message| %>
+
+        <li><%= message %></li>
+
+      <% end %>
+
+    </ul>
+
+   </div>
+
+   <% end %>
+
   <div>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
@@ -7,12 +37,16 @@
 
   <br>
 
+  <% if @project.persisted? %>
+
   <div>
     <%= form.label :slug %><br>
     <%= form.text_field :slug %>
   </div>
 
   <br>
+
+  <% end %>
 
   <div>
     <%= form.label :description %><br>
@@ -22,9 +56,36 @@
   <br>
 
   <div>
+
   <%= form.label :image %><br>
-  <%= form.file_field :image %>
+
+  <% if @project.persisted? && @project.image.attached? %>
+
+    <div style="margin:15px 0;">
+
+      <%= image_tag @project.image,
+            width: 350,
+            style: "border-radius:12px;border:1px solid #2f3652;" %>
+
     </div>
+
+  <% end %>
+
+  <%= form.file_field :image %>
+
+  <% if @project.persisted? && @project.image.attached? %>
+
+  <br><br>
+
+  <%= link_to "Remove current image",
+      remove_image_admin_project_path(@project),
+      data: {
+        turbo_method: :delete,
+        turbo_confirm: "Remove this image?"
+      } %>
+      <% end %>
+
+</div>
 
   <br>
 
@@ -55,6 +116,32 @@
   </div>
 
   <br>
+
+  <hr>
+
+<h3>Technologies</h3>
+
+<div>
+
+  <% @technologies.each do |technology| %>
+
+    <div>
+
+      <%= check_box_tag(
+            "project[technology_ids][]",
+            technology.id,
+            @project.technology_ids.include?(technology.id)
+          ) %>
+
+      <%= technology.name %>
+
+    </div>
+
+  <% end %>
+
+</div>
+
+<br>
 
   <%= form.submit %>
 

@@ -1,0 +1,173 @@
+/* ==========================================================
+   PORTFOLIO V2
+   CONTACT SECTION
+
+   Responsible for:
+   - Contact Layout
+   - Contact Header
+   - Contact Cards
+   - Contact Buttons
+
+   Author: Livan Passos
+   ========================================================== */
+
+
+/* ==========================================================
+   CONTACT SECTION
+   ========================================================== */
+
+.contact-section {
+
+    padding: var(--section-padding);
+
+    text-align: center;
+
+}
+
+
+/* ==========================================================
+   CONTACT HEADER
+   ========================================================== */
+
+.contact-header {
+
+    max-width: 760px;
+
+    margin: 0 auto 70px;
+
+}
+
+.contact-header h2 {
+
+    margin: 28px 0;
+
+    color: var(--text-primary);
+
+    font-size: var(--title-lg);
+
+    line-height: 1.08;
+
+}
+
+.contact-header p {
+
+    color: var(--text-secondary);
+
+    font-size: var(--font-lg);
+
+    line-height: 1.8;
+
+}
+
+
+/* ==========================================================
+   CONTACT GRID
+   ========================================================== */
+
+.contact-links {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+
+    gap: 24px;
+
+}
+
+
+/* ==========================================================
+   CONTACT CARD
+   ========================================================== */
+
+.contact-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 16px;
+
+    min-height: 72px;
+
+    padding: 22px;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-lg);
+
+    background: var(--bg-secondary);
+
+    color: var(--text-primary);
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: var(--transition);
+
+}
+
+
+/* ==========================================================
+   CONTACT ICON
+   ========================================================== */
+
+.contact-btn i {
+
+    font-size: 24px;
+
+    color: var(--accent);
+
+}
+
+
+/* ==========================================================
+   CONTACT HOVER
+   ========================================================== */
+
+.contact-btn:hover {
+
+    transform: translateY(-6px);
+
+    border-color: var(--accent);
+
+    box-shadow: var(--shadow-green);
+
+}
+
+
+/* ==========================================================
+   FEATURED CONTACT
+   ========================================================== */
+
+.contact-btn.featured {
+
+    border-color: var(--accent);
+
+}
+
+
+/* ==========================================================
+   ACTIVE CONTACT
+   ========================================================== */
+
+.contact-btn.active {
+
+    background: rgba(0,255,174,.08);
+
+}
+
+
+/* ==========================================================
+   UTILITIES
+   ========================================================== */
+
+.contact-btn {
+
+    will-change: transform;
+
+}

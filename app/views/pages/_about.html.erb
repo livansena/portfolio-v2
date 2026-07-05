@@ -1,19 +1,49 @@
 <section class="about-section" id="about">
+
   <div class="about-content">
-    <span class="section-tag">
-      ABOUT ME
-    </span>
 
-    <h2>
-      Industrial experience combined with software development.
-    </h2>
+    <div class="about-text">
 
-    <p>
-      I worked for years in high-performance industrial environments, dealing with maintenance, production, automation and critical systems.
-    </p>
+      <span class="section-tag">
+        <%= @about.tag %>
+      </span>
 
-    <p>
-      Today, I apply the same analytical mindset and problem-solving skills to backend and full stack development, building scalable, efficient and reliable software solutions.
-    </p>
+      <h2>
+        <%= @about.title_line_1 %><br>
+        <%= @about.title_line_2 %><br>
+        <%= @about.title_line_3 %>
+      </h2>
+
+      <%= simple_format(@about.description) %>
+
+      <div class="about-highlights">
+
+        <div class="highlight-card">
+          <%= @about.highlight_1 %>
+        </div>
+
+        <div class="highlight-card">
+          <%= @about.highlight_2 %>
+        </div>
+
+        <div class="highlight-card">
+          <%= @about.highlight_3 %>
+        </div>
+
+        <div class="highlight-card">
+          <%= @about.highlight_4 %>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="about-image">
+      <% if @about.image.attached? %>
+        <%= image_tag @about.image %>
+      <% end %>
+    </div>
+
   </div>
+
 </section>

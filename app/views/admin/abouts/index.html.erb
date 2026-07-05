@@ -1,0 +1,47 @@
+<h1>About CMS</h1>
+
+<table border="1" cellpadding="10">
+
+  <thead>
+
+    <tr>
+      <th>Tag</th>
+      <th>Title</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+
+  </thead>
+
+  <tbody>
+
+    <% @abouts.each do |about| %>
+
+      <tr>
+
+        <td>
+          <%= about.tag %>
+        </td>
+
+        <td>
+          <%= about.title_line_1 %><br>
+          <%= about.title_line_2 %><br>
+          <%= about.title_line_3 %>
+        </td>
+
+        <td>
+          <%= about.status.capitalize %>
+        </td>
+
+        <td>
+          <%= link_to "Edit",
+                edit_admin_about_path(about) %>
+        </td>
+
+      </tr>
+
+    <% end %>
+
+  </tbody>
+
+</table>

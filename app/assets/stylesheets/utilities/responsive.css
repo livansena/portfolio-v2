@@ -1,0 +1,312 @@
+/* ==========================================================
+   PORTFOLIO V2
+   RESPONSIVE
+
+   Responsible for:
+   - Tablet Layout
+   - Mobile Layout
+   - Small Devices
+
+   Author: Livan Passos
+   ========================================================== */
+
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 992px) {
+
+    /* -------------------------
+       Navbar
+    -------------------------- */
+
+    .navbar {
+
+        padding: 22px 40px;
+
+    }
+
+    .nav-links {
+
+        gap: 24px;
+
+    }
+
+
+    /* -------------------------
+       Hero
+    -------------------------- */
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 60px;
+
+    }
+
+    .hero-content {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+    }
+
+    .hero p {
+
+        max-width: 100%;
+
+    }
+
+
+    /* -------------------------
+       About
+    -------------------------- */
+
+    .about-content {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 60px;
+
+    }
+
+    .about-text {
+
+        align-items: center;
+
+    }
+
+    .about-highlights {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    /* -------------------------
+       Skills
+    -------------------------- */
+
+    .skills-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+    /* -------------------------
+       Projects
+    -------------------------- */
+
+    .projects-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+    /* -------------------------
+       Navbar
+    -------------------------- */
+
+    .navbar {
+
+        padding: 20px 24px;
+
+    }
+
+    .logo {
+
+        font-size: 28px;
+
+    }
+
+    .nav-links {
+
+        display: none;
+
+    }
+
+
+    /* -------------------------
+       Sections
+    -------------------------- */
+
+    .hero,
+    .about-section,
+    .skills-section,
+    .projects-section,
+    .contact-section {
+
+        padding: 90px 24px;
+
+    }
+
+
+    /* -------------------------
+       Titles
+    -------------------------- */
+
+    .hero h1 {
+
+        font-size: var(--title-md);
+
+    }
+
+    .about-text h2,
+    .skills-header h2,
+    .projects-header h2,
+    .contact-header h2 {
+
+        font-size: 42px;
+
+    }
+
+
+    /* -------------------------
+       Paragraphs
+    -------------------------- */
+
+    .hero p,
+    .about-text p,
+    .contact-header p {
+
+        font-size: 18px;
+
+    }
+
+
+    /* -------------------------
+       Hero Buttons
+    -------------------------- */
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        width: 100%;
+
+    }
+
+    .primary-btn,
+    .secondary-btn {
+
+        width: 100%;
+
+    }
+
+
+    /* -------------------------
+       About
+    -------------------------- */
+
+    .about-highlights {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* -------------------------
+       Skills
+    -------------------------- */
+
+    .skills-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    /* -------------------------
+       Projects
+    -------------------------- */
+
+    .projects-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .project-links {
+
+        flex-direction: column;
+
+    }
+
+    .project-btn {
+
+        width: 100%;
+
+    }
+
+
+    /* -------------------------
+       Contact
+    -------------------------- */
+
+    .contact-links {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+
+/* ==========================================================
+   SMALL MOBILE
+   ========================================================== */
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+
+        font-size: 40px;
+
+    }
+
+    .about-text h2,
+    .skills-header h2,
+    .projects-header h2,
+    .contact-header h2 {
+
+        font-size: 34px;
+
+    }
+
+    .hero-image img,
+    .about-image img {
+
+        max-width: 300px;
+
+    }
+
+    .skill-card,
+    .project-card {
+
+        padding: 24px;
+
+    }
+
+}

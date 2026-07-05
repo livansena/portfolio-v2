@@ -1,0 +1,110 @@
+<%= form_with model: [:admin, @hero] do |form| %>
+
+  <div>
+    <%= form.label :hero_tag, "Hero Tag" %><br>
+    <%= form.text_field :hero_tag %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :title_line_1, "Title Line 1" %><br>
+    <%= form.text_field :title_line_1 %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :title_line_2, "Title Line 2" %><br>
+    <%= form.text_field :title_line_2 %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :title_highlight, "Title Highlight" %><br>
+    <%= form.text_field :title_highlight %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :description, "Description" %><br>
+    <%= form.text_area :description, rows: 6 %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :primary_button_text, "Primary Button Text" %><br>
+    <%= form.text_field :primary_button_text %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :primary_button_url, "Primary Button URL" %><br>
+    <%= form.text_field :primary_button_url %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :secondary_button_text, "Secondary Button Text" %><br>
+    <%= form.text_field :secondary_button_text %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :secondary_button_url, "Secondary Button URL" %><br>
+    <%= form.text_field :secondary_button_url %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :image, "Hero Image" %><br>
+
+    <% if @hero.image.attached? %>
+      <%= image_tag @hero.image,
+            width: 220,
+            style: "border-radius: 8px; margin-bottom: 10px;" %>
+
+      <br><br>
+    <% end %>
+
+    <%= form.file_field :image %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :resume, "Resume (PDF)" %><br>
+
+    <% if @hero.resume.attached? %>
+      <p>
+        Current file:
+        <%= link_to @hero.resume.filename,
+                    url_for(@hero.resume),
+                    target: "_blank" %>
+      </p>
+    <% end %>
+
+    <%= form.file_field :resume,
+          accept: "application/pdf" %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :status, "Status" %><br>
+    <%= form.select :status,
+          [["Draft", "draft"], ["Published", "published"]] %>
+  </div>
+
+  <br>
+
+  <%= form.submit %>
+
+<% end %>

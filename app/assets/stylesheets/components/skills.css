@@ -1,0 +1,241 @@
+/* ==========================================================
+   PORTFOLIO V2
+   SKILLS SECTION
+
+   Responsible for:
+   - Skills Layout
+   - Skills Grid
+   - Skill Cards
+   - Technology Badges
+
+   Author: Livan Passos
+   ========================================================== */
+
+
+/* ==========================================================
+   SKILLS SECTION
+   ========================================================== */
+
+.skills-section {
+
+    padding: var(--section-padding);
+
+}
+
+
+/* ==========================================================
+   SKILLS HEADER
+   ========================================================== */
+
+.skills-header {
+
+    max-width: 700px;
+
+    margin-bottom: 70px;
+
+}
+
+.skills-header h2 {
+
+    margin: 28px 0;
+
+    font-size: var(--title-lg);
+
+    line-height: 1.08;
+
+    color: var(--text-primary);
+
+}
+
+.skills-header p {
+
+    color: var(--text-secondary);
+
+    font-size: var(--font-lg);
+
+    line-height: 1.8;
+
+}
+
+
+/* ==========================================================
+   SKILLS GRID
+   ========================================================== */
+
+.skills-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+    gap: 28px;
+
+}
+
+
+/* ==========================================================
+   SKILL CARD
+   ========================================================== */
+
+.skill-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    height: 100%;
+
+    padding: 36px;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-lg);
+
+    background: var(--bg-secondary);
+
+    transition: var(--transition);
+
+}
+
+.skill-card:hover {
+
+    transform: translateY(-8px);
+
+    border-color: var(--accent);
+
+    box-shadow: var(--shadow-green);
+
+}
+
+
+/* ==========================================================
+   SKILL ICON
+   ========================================================== */
+
+.skill-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 70px;
+
+    height: 70px;
+
+    margin-bottom: 28px;
+
+    border-radius: 18px;
+
+    background: rgba(0,255,174,.08);
+
+    color: var(--accent);
+
+    font-size: 34px;
+
+}
+
+
+/* ==========================================================
+   SKILL TITLE
+   ========================================================== */
+
+.skill-card h3 {
+
+    margin-bottom: 18px;
+
+    color: var(--text-primary);
+
+    font-size: 28px;
+
+}
+
+
+/* ==========================================================
+   SKILL DESCRIPTION
+   ========================================================== */
+
+.skill-card p {
+
+    flex: 1;
+
+    margin-bottom: 28px;
+
+    color: var(--text-secondary);
+
+    font-size: var(--font-md);
+
+    line-height: 1.8;
+
+}
+
+
+/* ==========================================================
+   TECHNOLOGY STACK
+   ========================================================== */
+
+.skill-stack {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+}
+
+
+/* ==========================================================
+   TECHNOLOGY BADGE
+   ========================================================== */
+
+.skill-stack span {
+
+    padding: 8px 16px;
+
+    border: 1px solid rgba(0,255,174,.20);
+
+    border-radius: var(--radius-xl);
+
+    background: rgba(0,255,174,.08);
+
+    color: var(--accent);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+}
+
+.skill-stack span:hover {
+
+    background: var(--accent);
+
+    color: var(--bg-primary);
+
+}
+
+
+/* ==========================================================
+   FEATURED CARD
+   ========================================================== */
+
+.skill-card.featured {
+
+    border-color: var(--accent);
+
+}
+
+
+/* ==========================================================
+   UTILITIES
+   ========================================================== */
+
+.skill-card {
+
+    will-change: transform, opacity;
+
+}

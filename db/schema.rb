@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_06_27_184614) do
+ActiveRecord::Schema[7.1].define(version: 2026_07_05_010415) do
+  create_table "abouts", force: :cascade do |t|
+    t.string "tag"
+    t.string "title_line_1"
+    t.string "title_line_2"
+    t.string "title_line_3"
+    t.text "description"
+    t.string "highlight_1"
+    t.string "highlight_2"
+    t.string "highlight_3"
+    t.string "highlight_4"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -37,6 +52,21 @@ ActiveRecord::Schema[7.1].define(version: 2026_06_27_184614) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "heroes", force: :cascade do |t|
+    t.text "description"
+    t.string "primary_button_text"
+    t.string "primary_button_url"
+    t.string "secondary_button_text"
+    t.string "secondary_button_url"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "title_line_1"
+    t.string "title_line_2"
+    t.string "hero_tag"
+    t.string "title_highlight"
   end
 
   create_table "project_technologies", force: :cascade do |t|

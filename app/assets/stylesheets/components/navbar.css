@@ -1,0 +1,189 @@
+/* ==========================================================
+   PORTFOLIO V2
+   NAVBAR
+
+   Responsável por:
+   - Navbar
+   - Logo
+   - Links
+   - Hover
+   - Sticky
+
+   Author: Livan Passos
+   ========================================================== */
+
+
+/* ======================================================
+   NAVBAR
+   ====================================================== */
+
+.navbar {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 24px 70px;
+
+    background: rgba(5, 8, 22, .88);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid var(--border);
+
+}
+
+
+/* ======================================================
+   LOGO
+   ====================================================== */
+
+.logo {
+
+    font-size: 34px;
+
+    font-weight: 800;
+
+    color: var(--text-primary);
+
+    transition: var(--transition);
+
+}
+
+.logo:hover {
+
+    color: var(--accent);
+
+    text-shadow:
+        0 0 12px rgba(0,255,174,.60),
+        0 0 24px rgba(0,255,174,.35);
+
+}
+
+
+/* ======================================================
+   NAVIGATION
+   ====================================================== */
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 42px;
+
+    list-style: none;
+
+}
+
+
+/* ======================================================
+   NAV LINKS
+   ====================================================== */
+
+.nav-links a {
+
+    position: relative;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: var(--text-primary);
+
+    transition: var(--transition);
+
+}
+
+.nav-links a:hover {
+
+    color: var(--accent);
+
+}
+
+
+/* ======================================================
+   UNDERLINE EFFECT
+   ====================================================== */
+
+.nav-links a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--accent);
+
+    border-radius: var(--radius-xl);
+
+    transition: var(--transition);
+
+}
+
+.nav-links a:hover::after {
+
+    width: 100%;
+
+}
+
+
+/* ======================================================
+   ACTIVE LINK
+   (Future-proofed for JS)
+   ====================================================== */
+
+.nav-links a.active {
+
+    color: var(--accent);
+
+}
+
+.nav-links a.active::after {
+
+    width: 100%;
+
+}
+
+
+/* ======================================================
+   STICKY EFFECT
+   (Future-proofed for JS)
+   ====================================================== */
+
+.navbar.scrolled {
+
+    background: rgba(5, 8, 22, .95);
+
+    box-shadow: var(--shadow-sm);
+
+}
+
+
+/* ======================================================
+   NAVBAR TRANSITIONS
+   ====================================================== */
+
+.navbar,
+.logo,
+.nav-links a {
+
+    transition: var(--transition);
+
+}

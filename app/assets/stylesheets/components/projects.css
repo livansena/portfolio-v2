@@ -1,0 +1,372 @@
+/* ==========================================================
+   PORTFOLIO V2
+   PROJECTS SECTION
+
+   Responsible for:
+   - Projects Layout
+   - Project Cards
+   - Featured Badge
+   - Project Image
+   - Project Stack
+   - Project Buttons
+
+   Author: Livan Passos
+   ========================================================== */
+
+
+/* ==========================================================
+   PROJECTS SECTION
+   ========================================================== */
+
+.projects-section {
+
+    padding: var(--section-padding);
+
+}
+
+
+/* ==========================================================
+   PROJECTS HEADER
+   ========================================================== */
+
+.projects-header {
+
+    max-width: 760px;
+
+    margin-bottom: 70px;
+
+}
+
+.projects-header h2 {
+
+    margin: 28px 0;
+
+    font-size: var(--title-lg);
+
+    line-height: 1.08;
+
+    color: var(--text-primary);
+
+}
+
+.projects-header p {
+
+    color: var(--text-secondary);
+
+    font-size: var(--font-lg);
+
+    line-height: 1.8;
+
+}
+
+
+/* ==========================================================
+   PROJECT GRID
+   ========================================================== */
+
+.projects-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+
+    gap: 32px;
+
+}
+
+
+/* ==========================================================
+   PROJECT CARD
+   ========================================================== */
+
+.project-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    height: 100%;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-lg);
+
+    background: var(--bg-secondary);
+
+    box-shadow: var(--shadow-sm);
+
+    transition: var(--transition);
+
+}
+
+.project-card:hover {
+
+    transform: translateY(-10px);
+
+    border-color: var(--accent);
+
+    box-shadow: var(--shadow-green);
+
+}
+
+
+/* ==========================================================
+   PROJECT IMAGE
+   ========================================================== */
+
+.project-image {
+
+    overflow: hidden;
+
+    height: 240px;
+
+    background: #08101f;
+
+}
+
+.project-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .5s ease;
+
+}
+
+.project-card:hover .project-image img {
+
+    transform: scale(1.05);
+
+}
+
+
+/* ==========================================================
+   PROJECT CONTENT
+   ========================================================== */
+
+.project-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+
+    padding: 30px;
+
+}
+
+
+/* ==========================================================
+   FEATURED BADGE
+   ========================================================== */
+
+.project-featured {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: fit-content;
+
+    margin-bottom: 20px;
+
+    padding: 8px 16px;
+
+    border-radius: var(--radius-xl);
+
+    background: rgba(0,255,174,.10);
+
+    color: var(--accent);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+/* ==========================================================
+   PROJECT TITLE
+   ========================================================== */
+
+.project-card h3 {
+
+    margin-bottom: 20px;
+
+    color: var(--text-primary);
+
+    font-size: 30px;
+
+}
+
+
+/* ==========================================================
+   PROJECT DESCRIPTION
+   ========================================================== */
+
+.project-card p {
+
+    flex: 1;
+
+    margin-bottom: 30px;
+
+    color: var(--text-secondary);
+
+    line-height: 1.8;
+
+}
+
+
+/* ==========================================================
+   TECHNOLOGY STACK
+   ========================================================== */
+
+.project-stack {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+
+}
+
+.project-stack span {
+
+    padding: 8px 16px;
+
+    border-radius: var(--radius-xl);
+
+    border: 1px solid rgba(0,255,174,.20);
+
+    background: rgba(0,255,174,.08);
+
+    color: var(--accent);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+}
+
+.project-stack span:hover {
+
+    background: var(--accent);
+
+    color: var(--bg-primary);
+
+}
+
+
+/* ==========================================================
+   PROJECT ACTIONS
+   ========================================================== */
+
+.project-links {
+
+    display: flex;
+
+    gap: 16px;
+
+    margin-top: auto;
+
+}
+
+
+/* ==========================================================
+   PRIMARY BUTTON
+   ========================================================== */
+
+.project-btn {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    flex: 1;
+
+    height: 52px;
+
+    border-radius: var(--radius-md);
+
+    background: var(--accent);
+
+    color: var(--bg-primary);
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: var(--transition);
+
+}
+
+.project-btn:hover {
+
+    background: var(--accent-hover);
+
+    transform: translateY(-3px);
+
+}
+
+
+/* ==========================================================
+   SECONDARY BUTTON
+   ========================================================== */
+
+.project-btn.secondary {
+
+    background: transparent;
+
+    border: 1px solid var(--border);
+
+    color: var(--text-primary);
+
+}
+
+.project-btn.secondary:hover {
+
+    background: rgba(0,255,174,.06);
+
+    border-color: var(--accent);
+
+    color: var(--accent);
+
+}
+
+
+/* ==========================================================
+   FEATURED PROJECT
+   ========================================================== */
+
+.project-card.featured {
+
+    border-color: var(--accent);
+
+}
+
+
+/* ==========================================================
+   UTILITIES
+   ========================================================== */
+
+.project-card,
+.project-image img {
+
+    will-change: transform;
+
+}

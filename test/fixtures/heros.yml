@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  highlight: MyString
+  description: MyText
+  primary_button_text: MyString
+  primary_button_url: MyString
+  secondary_button_text: MyString
+  secondary_button_url: MyString
+  status: MyString
+
+two:
+  title: MyString
+  highlight: MyString
+  description: MyText
+  primary_button_text: MyString
+  primary_button_url: MyString
+  secondary_button_text: MyString
+  secondary_button_url: MyString
+  status: MyString

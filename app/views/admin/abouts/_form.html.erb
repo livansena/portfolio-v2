@@ -1,0 +1,94 @@
+<%= form_with model: [:admin, @about] do |form| %>
+
+  <div>
+    <%= form.label :tag, "Tag" %><br>
+    <%= form.text_field :tag %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :title_line_1, "Title Line 1" %><br>
+    <%= form.text_field :title_line_1 %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :title_line_2, "Title Line 2" %><br>
+    <%= form.text_field :title_line_2 %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :title_line_3, "Title Line 3" %><br>
+    <%= form.text_field :title_line_3 %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :description, "Description" %><br>
+    <%= form.text_area :description, rows: 8 %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :highlight_1, "Highlight 1" %><br>
+    <%= form.text_field :highlight_1 %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :highlight_2, "Highlight 2" %><br>
+    <%= form.text_field :highlight_2 %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :highlight_3, "Highlight 3" %><br>
+    <%= form.text_field :highlight_3 %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :highlight_4, "Highlight 4" %><br>
+    <%= form.text_field :highlight_4 %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :image, "About Image" %><br>
+
+    <% if @about.image.attached? %>
+      <%= image_tag @about.image,
+            width: 220,
+            style: "border-radius:8px; margin-bottom:10px;" %>
+
+      <br><br>
+    <% end %>
+
+    <%= form.file_field :image %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :status, "Status" %><br>
+
+    <%= form.select :status,
+          [["Draft", "draft"],
+           ["Published", "published"]] %>
+  </div>
+
+  <br>
+
+  <%= form.submit %>
+
+<% end %>

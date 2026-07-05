@@ -1,0 +1,221 @@
+/* ==========================================================
+   PORTFOLIO V2
+   ANIMATIONS
+
+   All reusable animations of the project.
+
+   Author: Livan Passos
+   ========================================================== */
+
+
+/* ======================================================
+   FADE IN
+   ====================================================== */
+
+@keyframes fadeIn {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+
+/* ======================================================
+   FADE UP
+   ====================================================== */
+
+@keyframes fadeUp {
+
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* ======================================================
+   FADE LEFT
+   ====================================================== */
+
+@keyframes fadeLeft {
+
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+
+
+/* ======================================================
+   FADE RIGHT
+   ====================================================== */
+
+@keyframes fadeRight {
+
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}
+
+
+/* ======================================================
+   SCALE IN
+   ====================================================== */
+
+@keyframes scaleIn {
+
+  from {
+    opacity: 0;
+    transform: scale(.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+}
+
+
+/* ======================================================
+   FLOAT
+   (Imagem do Hero)
+   ====================================================== */
+
+@keyframes floating {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
+}
+
+
+/* ======================================================
+   GLOW
+   (Elementos verdes)
+   ====================================================== */
+
+@keyframes glow {
+
+  0% {
+    box-shadow: 0 0 0 rgba(0,255,174,0);
+  }
+
+  50% {
+    box-shadow: 0 0 30px rgba(0,255,174,.25);
+  }
+
+  100% {
+    box-shadow: 0 0 0 rgba(0,255,174,0);
+  }
+
+}
+
+
+/* ======================================================
+   UTILITIES
+   Classes reutilizáveis
+   ====================================================== */
+
+.fade-in {
+
+  animation:
+    fadeIn
+    .8s
+    ease
+    forwards;
+
+}
+
+.fade-up {
+
+  animation:
+    fadeUp
+    .8s
+    ease
+    forwards;
+
+}
+
+.fade-left {
+
+  animation:
+    fadeLeft
+    .8s
+    ease
+    forwards;
+
+}
+
+.fade-right {
+
+  animation:
+    fadeRight
+    .8s
+    ease
+    forwards;
+
+}
+
+.scale-in {
+
+  animation:
+    scaleIn
+    .7s
+    ease
+    forwards;
+
+}
+
+.floating {
+
+  animation:
+    floating
+    5s
+    ease-in-out
+    infinite;
+
+}
+
+.glow {
+
+  animation:
+    glow
+    3s
+    ease-in-out
+    infinite;
+
+}

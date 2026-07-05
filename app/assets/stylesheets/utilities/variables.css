@@ -1,0 +1,121 @@
+/* ==========================================================
+   PORTFOLIO V2
+   VARIABLES
+
+   Centralização de:
+   - COLORS
+   - TYPOGRAPHY
+   - SPACING
+   - BORDER RADIUS
+   - SHADOWS
+   - TRANSITIONS
+   - Layout
+
+   Author: Livan Passos
+   ========================================================== */
+
+:root {
+
+  /* ======================================================
+     COLORS
+     ====================================================== */
+
+  --bg-primary: #050816;
+  --bg-secondary: #0e1220;
+  --bg-card: #111827;
+
+  --text-primary: #ffffff;
+  --text-secondary: #b7bdd3;
+  --text-muted: #94a3b8;
+
+  --accent: #00ffae;
+  --accent-hover: #00e697;
+
+  --danger: #ef4444;
+  --danger-hover: #dc2626;
+
+  --border: #1d2945;
+
+
+
+  /* ======================================================
+     TYPOGRAPHY
+     ====================================================== */
+
+  --font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  --font-xs: 13px;
+  --font-sm: 15px;
+  --font-md: 17px;
+  --font-lg: 22px;
+
+  --title-sm: 34px;
+  --title-md: 52px;
+  --title-lg: 72px;
+  --title-xl: 88px;
+
+
+
+  /* ======================================================
+     SPACING
+     ====================================================== */
+
+  --section-padding: 140px 70px;
+
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 32px;
+  --space-xl: 48px;
+
+
+
+  /* ======================================================
+     BORDER RADIUS
+     ====================================================== */
+
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 999px;
+
+
+
+  /* ======================================================
+     SHADOWS
+     ====================================================== */
+
+  --shadow-sm:
+    0 8px 20px rgba(0,0,0,.20);
+
+  --shadow-md:
+    0 15px 35px rgba(0,0,0,.35);
+
+  --shadow-green:
+    0 15px 30px rgba(0,255,174,.18);
+
+  --shadow-red:
+    0 15px 30px rgba(239,68,68,.18);
+
+
+
+  /* ======================================================
+     TRANSITIONS
+     ====================================================== */
+
+  --transition-fast: .20s ease;
+  --transition: .30s ease;
+  --transition-slow: .45s ease;
+
+
+
+  /* ======================================================
+     CONTAINER
+     ====================================================== */
+
+  --container-width: 1320px;
+
+}

@@ -1,0 +1,226 @@
+/* ==========================================================
+   PORTFOLIO V2
+   FOOTER
+
+   Responsible for:
+   - Footer Layout
+   - Footer Typography
+   - Footer Links
+   - Social Links
+
+   Author: Livan Passos
+   ========================================================== */
+
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+
+.footer {
+
+    padding: 80px 70px 40px;
+
+    margin-top: 80px;
+
+    border-top: 1px solid var(--border);
+
+    background: var(--bg-primary);
+
+}
+
+
+/* ==========================================================
+   FOOTER CONTAINER
+   ========================================================== */
+
+.footer-container {
+
+    max-width: var(--container-width);
+
+    margin: 0 auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+
+/* ==========================================================
+   FOOTER LOGO
+   ========================================================== */
+
+.footer-logo {
+
+    font-size: 32px;
+
+    font-weight: 700;
+
+    color: var(--text-primary);
+
+    transition: var(--transition);
+
+}
+
+.footer-logo:hover {
+
+    color: var(--accent);
+
+}
+
+
+/* ==========================================================
+   FOOTER DESCRIPTION
+   ========================================================== */
+
+.footer-description {
+
+    max-width: 620px;
+
+    color: var(--text-secondary);
+
+    font-size: var(--font-md);
+
+    line-height: 1.8;
+
+    text-align: center;
+
+}
+
+
+/* ==========================================================
+   SOCIAL LINKS
+   ========================================================== */
+
+.footer-social {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 18px;
+
+}
+
+
+/* ==========================================================
+   SOCIAL BUTTON
+   ========================================================== */
+
+.footer-social a {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 52px;
+
+    height: 52px;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--border);
+
+    background: var(--bg-secondary);
+
+    color: var(--text-primary);
+
+    font-size: 20px;
+
+    transition: var(--transition);
+
+}
+
+.footer-social a:hover {
+
+    color: var(--accent);
+
+    border-color: var(--accent);
+
+    transform: translateY(-5px);
+
+    box-shadow: var(--shadow-green);
+
+}
+
+
+/* ==========================================================
+   FOOTER DIVIDER
+   ========================================================== */
+
+.footer-divider {
+
+    width: 100%;
+
+    height: 1px;
+
+    background: var(--border);
+
+}
+
+
+/* ==========================================================
+   COPYRIGHT
+   ========================================================== */
+
+.footer-copy {
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+
+    letter-spacing: .5px;
+
+    text-align: center;
+
+}
+
+
+/* ==========================================================
+   FOOTER LINKS
+   ========================================================== */
+
+.footer-links {
+
+    display: flex;
+
+    gap: 28px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+}
+
+.footer-links a {
+
+    color: var(--text-secondary);
+
+    transition: var(--transition);
+
+}
+
+.footer-links a:hover {
+
+    color: var(--accent);
+
+}
+
+
+/* ==========================================================
+   UTILITIES
+   ========================================================== */
+
+.footer a {
+
+    text-decoration: none;
+
+}

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
     resources :abouts, except: [:new, :create, :destroy]
 
+    resources :skills
+
     resources :projects do
       member do
         delete :remove_image

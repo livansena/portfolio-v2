@@ -1,0 +1,102 @@
+<h1>Skills</h1>
+
+<p>
+  <%= link_to "➕ New Skill", new_admin_skill_path %>
+</p>
+
+<table border="1" cellpadding="10">
+
+  <thead>
+    <tr>
+      <th>Icon</th>
+      <th>Position</th>
+      <th>Title</th>
+      <th>Category</th>
+      <th>Proficiency</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <% @skills.each do |skill| %>
+
+      <tr>
+
+        <td>
+
+          <% if skill.icon.attached? %>
+
+            <%= image_tag skill.icon,
+                  width: 60,
+                  style: "border-radius:10px;" %>
+
+          <% else %>
+
+            No icon
+
+          <% end %>
+
+        </td>
+
+        <td>
+          <%= skill.display_order %>
+        </td>
+
+        <td>
+          <%= skill.title %>
+        </td>
+
+        <td>
+          <%= skill.category %>
+        </td>
+
+        <td>
+          <%= skill.proficiency %>%
+        </td>
+
+        <td>
+
+          <% if skill.published? %>
+
+            <span style="
+              color:#00f5b4;
+              font-weight:bold;
+            ">
+              Published
+            </span>
+
+          <% else %>
+
+            <span style="color:#888;">
+              Draft
+            </span>
+
+          <% end %>
+
+        </td>
+
+        <td>
+
+          <%= link_to "Edit",
+                edit_admin_skill_path(skill) %>
+
+          |
+
+          <%= link_to "Delete",
+                admin_skill_path(skill),
+                data: {
+                  turbo_method: :delete,
+                  turbo_confirm: "Are you sure?"
+                } %>
+
+        </td>
+
+      </tr>
+
+    <% end %>
+
+  </tbody>
+
+</table>

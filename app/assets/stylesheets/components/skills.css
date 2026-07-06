@@ -66,7 +66,7 @@
 
     display: grid;
 
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
 
     gap: 28px;
 
@@ -81,11 +81,15 @@
 
     display: flex;
 
-    flex-direction: column;
+    align-items: center;
 
-    height: 100%;
+    justify-content: center;
 
-    padding: 36px;
+    gap: 18px;
+
+    min-height: 90px;
+
+    padding: 0 28px;
 
     border: 1px solid var(--border);
 
@@ -114,25 +118,15 @@
 
 .skill-icon {
 
-    display: flex;
+    width: 36px;
 
-    align-items: center;
+    height: 36px;
 
-    justify-content: center;
+    object-fit: contain;
 
-    width: 70px;
+    display: block;
 
-    height: 70px;
-
-    margin-bottom: 28px;
-
-    border-radius: 18px;
-
-    background: rgba(0,255,174,.08);
-
-    color: var(--accent);
-
-    font-size: 34px;
+    flex-shrink: 0;
 
 }
 
@@ -141,13 +135,15 @@
    SKILL TITLE
    ========================================================== */
 
-.skill-card h3 {
-
-    margin-bottom: 18px;
+.skill-title {
 
     color: var(--text-primary);
 
-    font-size: 28px;
+    font-size: 1.15rem;
+
+    font-weight: 600;
+
+    line-height: 1;
 
 }
 

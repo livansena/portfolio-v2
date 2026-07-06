@@ -1,0 +1,95 @@
+<%= form_with model: [:admin, @skill] do |form| %>
+
+  <% if @skill.errors.any? %>
+
+    <div style="
+      background:#3b1111;
+      color:#ffb4b4;
+      border:1px solid #a94442;
+      padding:18px;
+      border-radius:10px;
+      margin-bottom:25px;
+    ">
+
+      <h3>
+        <%= pluralize(@skill.errors.count, "error") %>
+        prevented this skill from being saved:
+      </h3>
+
+      <ul>
+        <% @skill.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+
+    </div>
+
+  <% end %>
+
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :category %><br>
+    <%= form.text_field :category %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :description %><br>
+    <%= form.text_area :description, rows: 5 %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :proficiency %><br>
+    <%= form.number_field :proficiency %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :display_order %><br>
+    <%= form.number_field :display_order %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.check_box :published %>
+    <%= form.label :published %>
+  </div>
+
+  <br>
+
+  <div>
+
+    <%= form.label :icon %><br>
+
+    <% if @skill.persisted? && @skill.icon.attached? %>
+
+      <div style="margin:15px 0;">
+
+        <%= image_tag @skill.icon,
+              width: 120,
+              style: "border-radius:12px;border:1px solid #2f3652;" %>
+
+      </div>
+
+    <% end %>
+
+    <%= form.file_field :icon %>
+
+  </div>
+
+  <br>
+
+  <%= form.submit %>
+
+<% end %>

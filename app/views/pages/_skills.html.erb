@@ -10,33 +10,24 @@
 
   <div class="skills-grid">
 
-    <div class="skill-card">Ruby</div>
+    <% @skills.each do |skill| %>
 
-    <div class="skill-card">Ruby on Rails</div>
+      <div class="skill-card">
 
-    <div class="skill-card">PostgreSQL</div>
+        <% if skill.icon.attached? %>
 
-    <div class="skill-card">JavaScript</div>
+          <%= image_tag skill.icon,
+                class: "skill-icon" %>
 
-    <div class="skill-card">HTML & CSS</div>
+        <% end %>
 
-    <div class="skill-card">Git & GitHub</div>
+        <span class="skill-title">
+          <%= skill.title %>
+        </span>
 
-    <div class="skill-card">REST APIs</div>
+      </div>
 
-    <div class="skill-card">Linux Ubuntu</div>
-
-    <div class="skill-card">Docker</div>
-
-    <div class="skill-card">Redis</div>
-
-    <div class="skill-card">Nginx</div>
-
-    <div class="skill-card">Puma</div>
-
-    <div class="skill-card">Sidekiq</div>
-
-    <div class="skill-card">WSL2 & VS Code</div>
+    <% end %>
 
   </div>
 

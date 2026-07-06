@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_07_05_171833) do
+ActiveRecord::Schema[7.1].define(version: 2026_07_06_144337) do
   create_table "abouts", force: :cascade do |t|
     t.string "tag"
     t.string "title_line_1"
@@ -52,6 +52,18 @@ ActiveRecord::Schema[7.1].define(version: 2026_07_05_171833) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "tag"
+    t.string "title"
+    t.text "subtitle"
+    t.string "linkedin_url"
+    t.string "github_url"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "resume_url"
   end
 
   create_table "heroes", force: :cascade do |t|

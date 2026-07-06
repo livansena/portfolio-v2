@@ -1,10 +1,14 @@
 Rails.application.routes.draw do
   root "pages#home"
 
+  post "contact", to: "contacts#create"
+
   namespace :admin do
     resources :heroes
 
     resources :abouts, except: [:new, :create, :destroy]
+
+    resources :contacts, except: [:new, :create, :destroy]
 
     resources :skills
 

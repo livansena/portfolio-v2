@@ -5,6 +5,7 @@ class PagesController < ApplicationController
     @projects = Project.where(featured: true).order(:position)
     @about = About.find_by(status: "published")
     @skills = Skill.published.ordered
+    @contact = Contact.find_by(status: "published")
   end
 
 end

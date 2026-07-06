@@ -1,0 +1,89 @@
+<%= form_with model: [:admin, @contact] do |form| %>
+
+  <% if @contact.errors.any? %>
+
+    <div style="
+      background:#3b1111;
+      color:#ffb4b4;
+      border:1px solid #a94442;
+      padding:18px;
+      border-radius:10px;
+      margin-bottom:25px;
+    ">
+
+      <h3>
+        <%= pluralize(@contact.errors.count, "error") %>
+        prevented this contact from being saved:
+      </h3>
+
+      <ul>
+
+        <% @contact.errors.full_messages.each do |message| %>
+
+          <li><%= message %></li>
+
+        <% end %>
+
+      </ul>
+
+    </div>
+
+  <% end %>
+
+
+  <div>
+    <%= form.label :tag %><br>
+    <%= form.text_field :tag %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :subtitle %><br>
+    <%= form.text_area :subtitle, rows: 4 %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :linkedin_url %><br>
+    <%= form.text_field :linkedin_url %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :github_url %><br>
+    <%= form.text_field :github_url %>
+  </div>
+
+  <div class="field">
+  <%= form.label :resume_url, "Resume URL" %>
+  <%= form.text_field :resume_url %>
+  </div>
+
+  <br>
+
+  <div>
+    <%= form.label :status %><br>
+
+    <%= form.select :status,
+      [
+        ["Draft", "draft"],
+        ["Published", "published"]
+      ] %>
+
+  </div>
+
+  <br>
+
+  <%= form.submit %>
+
+<% end %>

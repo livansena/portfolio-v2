@@ -4,8 +4,13 @@
        CONTACT SECTION
        ========================================================== -->
 
-  <section class="contact-section"
-           id="contact">
+  <section
+    id="contact"
+    class="contact-section">
+
+    <!-- ==========================================================
+         CONTACT HEADER
+         ========================================================== -->
 
     <div class="contact-header">
 
@@ -23,9 +28,8 @@
 
     </div>
 
-
     <!-- ==========================================================
-         CONTACT BUTTONS
+         CONTACT LINKS
          ========================================================== -->
 
     <div class="contact-links">
@@ -41,10 +45,11 @@
 
       </button>
 
-
-      <a href="<%= @contact.linkedin_url %>"
-         target="_blank"
-         class="contact-btn">
+      <a
+        href="<%= @contact.linkedin_url %>"
+        target="_blank"
+        rel="noopener"
+        class="contact-btn">
 
         <i class="fa-brands fa-linkedin"></i>
 
@@ -52,10 +57,11 @@
 
       </a>
 
-
-      <a href="<%= @contact.github_url %>"
-         target="_blank"
-         class="contact-btn">
+      <a
+        href="<%= @contact.github_url %>"
+        target="_blank"
+        rel="noopener"
+        class="contact-btn">
 
         <i class="fa-brands fa-github"></i>
 
@@ -63,10 +69,11 @@
 
       </a>
 
-
-      <a href="<%= @contact.resume_url %>"
-         target="_blank"
-         class="contact-btn">
+      <a
+        href="<%= @contact.resume_url %>"
+        target="_blank"
+        rel="noopener"
+        class="contact-btn">
 
         <i class="fa-solid fa-file-lines"></i>
 
@@ -78,17 +85,21 @@
 
   </section>
 
-
   <!-- ==========================================================
        CONTACT MODAL
        ========================================================== -->
 
-  <div id="contact-modal"
-       class="contact-modal"
-       data-contact-modal-target="modal"
-       data-action="click->contact-modal#closeBackground">
+  <div
+    id="contact-modal"
+    class="contact-modal"
+    data-contact-modal-target="modal"
+    data-action="click->contact-modal#closeBackground">
 
     <div class="contact-modal-content">
+
+      <!-- ======================================================
+           CLOSE BUTTON
+           ====================================================== -->
 
       <button
         type="button"
@@ -99,15 +110,31 @@
 
       </button>
 
+      <!-- ======================================================
+           MODAL HEADER
+           ====================================================== -->
 
       <h3>
         Send me a message
       </h3>
 
+      <p class="contact-modal-subtitle">
+        Have a project, opportunity or question?
+        I'd love to hear from you.
+      </p>
+
+      <!-- ======================================================
+           CONTACT FORM
+           ====================================================== -->
 
       <%= form_with url: contact_path,
                     method: :post,
-                    local: true do |form| %>
+                    local: true,
+                    data: {
+                      action: "submit->contact-modal#submit"
+                    } do |form| %>
+
+        <!-- Name -->
 
         <div class="form-group">
 
@@ -119,6 +146,7 @@
 
         </div>
 
+        <!-- Email -->
 
         <div class="form-group">
 
@@ -130,6 +158,7 @@
 
         </div>
 
+        <!-- Subject -->
 
         <div class="form-group">
 
@@ -141,6 +170,7 @@
 
         </div>
 
+        <!-- Message -->
 
         <div class="form-group">
 
@@ -153,6 +183,7 @@
 
         </div>
 
+        <!-- Actions -->
 
         <div class="contact-modal-actions">
 
@@ -165,9 +196,11 @@
 
           </button>
 
-
           <%= form.submit "Send Message",
-                class: "primary-btn" %>
+                class: "primary-btn",
+                data: {
+                  contact_modal_target: "submitButton"
+                } %>
 
         </div>
 

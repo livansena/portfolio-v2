@@ -1,0 +1,73 @@
+/* ==========================================================
+   FLASH MESSAGE
+   ========================================================== */
+
+#flash {
+
+  position: fixed;
+
+  top: 24px;
+
+  right: 24px;
+
+  z-index: 9999;
+
+}
+
+.flash-message {
+
+  min-width: 340px;
+
+  padding: 18px 22px;
+
+  margin-bottom: 16px;
+
+  border-radius: var(--radius-md);
+
+  font-size: var(--font-md);
+
+  font-weight: 500;
+
+  color: var(--text-primary);
+
+  background: var(--bg-secondary);
+
+  border-left: 4px solid var(--accent);
+
+  box-shadow: var(--shadow);
+
+  animation: flashFadeIn .35s ease;
+
+}
+
+.flash-message.notice {
+
+  border-left-color: #22c55e;
+
+}
+
+.flash-message.alert {
+
+  border-left-color: #ef4444;
+
+}
+
+@keyframes flashFadeIn {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(-15px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}

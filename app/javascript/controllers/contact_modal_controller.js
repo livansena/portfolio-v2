@@ -2,7 +2,10 @@ import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
 
-  static targets = ["modal"]
+  static targets = [
+    "modal",
+    "submitButton"
+  ]
 
   connect() {
 
@@ -18,6 +21,10 @@ export default class extends Controller {
 
   }
 
+  // ==========================================================
+  // MODAL
+  // ==========================================================
+
   open() {
 
     this.modalTarget.classList.add("active")
@@ -27,6 +34,8 @@ export default class extends Controller {
   close() {
 
     this.modalTarget.classList.remove("active")
+
+    this.resetButton()
 
   }
 
@@ -47,6 +56,32 @@ export default class extends Controller {
       this.close()
 
     }
+
+  }
+
+  // ==========================================================
+  // FORM
+  // ==========================================================
+
+  submit() {
+
+    this.loading()
+
+  }
+
+  loading() {
+
+    this.submitButtonTarget.disabled = true
+
+    this.submitButtonTarget.value = "Sending..."
+
+  }
+
+  resetButton() {
+
+    this.submitButtonTarget.disabled = false
+
+    this.submitButtonTarget.value = "Send Message"
 
   }
 

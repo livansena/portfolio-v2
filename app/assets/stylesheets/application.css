@@ -20,6 +20,7 @@
  *= require components/skills
  *= require components/projects
  *= require components/contact
+ *= require components/flash
  *= require components/footer
  *
  * Responsive

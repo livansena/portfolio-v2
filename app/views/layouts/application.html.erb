@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PortfolioV2</title>
+    <title>Livan Passos</title>
 
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
@@ -17,7 +17,13 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+    <body>
+
+    <div id="flash">
+    <%= render "shared/flash" %>
+    </div>
+
     <%= yield %>
-  </body>
+
+    </body>
 </html>

@@ -1,0 +1,175 @@
+/* ==========================================================
+   PORTFOLIO V2
+   TOAST COMPONENT
+
+   Responsible for:
+   - Success Messages
+   - Error Messages
+   - Animations
+
+   Author: Livan Passos
+   ========================================================== */
+
+
+/* ==========================================================
+   TOAST CONTAINER
+   ========================================================== */
+
+#flash {
+
+  position: fixed;
+
+  top: 30px;
+
+  right: 30px;
+
+  z-index: 9999;
+
+}
+
+
+/* ==========================================================
+   TOAST
+   ========================================================== */
+
+.toast {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 18px;
+
+  width: 420px;
+
+  padding: 22px;
+
+  margin-bottom: 18px;
+
+  border-radius: var(--radius-lg);
+
+  background: var(--bg-secondary);
+
+  border: 1px solid var(--border);
+
+  box-shadow: var(--shadow);
+
+  animation: toastFade .35s ease;
+
+}
+
+
+/* ==========================================================
+   SUCCESS
+   ========================================================== */
+
+.toast-notice {
+
+  border-left: 4px solid #22c55e;
+
+}
+
+
+/* ==========================================================
+   ERROR
+   ========================================================== */
+
+.toast-alert {
+
+  border-left: 4px solid #ef4444;
+
+}
+
+
+/* ==========================================================
+   ICON
+   ========================================================== */
+
+.toast-icon {
+
+  font-size: 24px;
+
+  color: var(--accent);
+
+}
+
+
+/* ==========================================================
+   CONTENT
+   ========================================================== */
+
+.toast-content {
+
+  flex: 1;
+
+}
+
+.toast-content h4 {
+
+  margin-bottom: 8px;
+
+  color: var(--text-primary);
+
+  font-size: 18px;
+
+}
+
+.toast-content p {
+
+  color: var(--text-secondary);
+
+  line-height: 1.6;
+
+}
+
+
+/* ==========================================================
+   CLOSE BUTTON
+   ========================================================== */
+
+.toast-close {
+
+  background: none;
+
+  border: none;
+
+  color: var(--text-secondary);
+
+  cursor: pointer;
+
+  font-size: 24px;
+
+  transition: var(--transition);
+
+}
+
+.toast-close:hover {
+
+  color: var(--accent);
+
+}
+
+
+/* ==========================================================
+   ANIMATION
+   ========================================================== */
+
+@keyframes toastFade {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(-20px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}

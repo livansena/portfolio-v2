@@ -22,7 +22,13 @@ export default class extends Controller {
 
   }
 
+  // ==========================================================
+  // CLOSE TOAST
+  // ==========================================================
+
   close() {
+
+    this.element.style.transition = "all .30s ease"
 
     this.element.style.opacity = "0"
 

@@ -1,0 +1,135 @@
+/* ==========================================================
+   DASHBOARD
+   ========================================================== */
+
+.dashboard {
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+}
+
+.dashboard-header {
+
+    margin-bottom: 48px;
+
+}
+
+.dashboard-tag {
+
+    display: inline-block;
+
+    padding: 8px 14px;
+
+    border-radius: 999px;
+
+    background: rgba(0,245,150,.10);
+
+    color: #00F596;
+
+    font-size: .75rem;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 18px;
+
+}
+
+.dashboard-header h1 {
+
+    font-size: 3rem;
+
+    margin-bottom: 14px;
+
+}
+
+.dashboard-header p {
+
+    color: #8B95A7;
+
+    font-size: 1.05rem;
+
+}
+
+.dashboard-card:last-child {
+
+    grid-column: 1 / -1;
+
+}
+
+.dashboard-grid {
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 24px;
+
+}
+
+.dashboard-card {
+
+    background: #161B22;
+
+    border: 1px solid #242B36;
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+}
+
+.dashboard-card h2 {
+
+    margin-bottom: 10px;
+
+}
+
+.dashboard-card p {
+
+    color: #8B95A7;
+
+}
+
+/* ==========================================================
+   PORTFOLIO STATUS
+   ========================================================== */
+
+.dashboard-status {
+
+    margin-top: 24px;
+
+}
+
+.status-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 16px 0;
+
+    border-bottom: 1px solid #242B36;
+
+}
+
+.status-item:last-child {
+
+    border-bottom: none;
+
+}
+
+.status-item span:first-child {
+
+    color: #FFFFFF;
+
+    font-weight: 500;
+
+}

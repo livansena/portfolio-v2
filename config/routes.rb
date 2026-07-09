@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   post "contact", to: "contacts#create"
 
   namespace :admin do
+    
+    root "dashboard#index"
+
     resources :heroes
 
     resources :abouts, except: [:new, :create, :destroy]
@@ -22,4 +25,8 @@ Rails.application.routes.draw do
   end
 
   get "up" => "rails/health#show", as: :rails_health_check
+
+post "/turbo-test", to: "pages#turbo_test"
+
 end
+

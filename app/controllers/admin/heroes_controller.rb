@@ -1,7 +1,9 @@
 class Admin::HeroesController < ApplicationController
 
   def index
-    @heroes = Hero.all
+  hero = Hero.first
+
+  redirect_to edit_admin_hero_path(hero)
   end
 
   def new

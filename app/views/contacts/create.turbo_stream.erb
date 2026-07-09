@@ -1,1 +1,9 @@
-<%= turbo_stream.append "flash", partial: "shared/flash" %>
+<%= turbo_stream.replace "flash" do %>
+  <div id="flash">
+    <%= render "shared/flash" %>
+  </div>
+<% end %>
+
+<%= turbo_stream.replace "contact-form" do %>
+  <%= render "pages/contact_form" %>
+<% end %>

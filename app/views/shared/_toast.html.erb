@@ -5,9 +5,13 @@
     data-controller="toast"
     data-toast-delay-value="5000">
 
+    <!-- ======================================================
+         ICON
+         ====================================================== -->
+
     <div class="toast-icon">
 
-      <% if type == "notice" %>
+      <% if type.to_s == "notice" %>
 
         <i class="fa-solid fa-circle-check"></i>
 
@@ -19,11 +23,16 @@
 
     </div>
 
+
+    <!-- ======================================================
+         CONTENT
+         ====================================================== -->
+
     <div class="toast-content">
 
       <h4>
 
-        <%= type == "notice" ? "Success" : "Error" %>
+        <%= type.to_s == "notice" ? "Success" : "Error" %>
 
       </h4>
 
@@ -35,8 +44,15 @@
 
     </div>
 
+
+    <!-- ======================================================
+         CLOSE
+         ====================================================== -->
+
     <button
+      type="button"
       class="toast-close"
+      aria-label="Close notification"
       data-action="click->toast#close">
 
       &times;

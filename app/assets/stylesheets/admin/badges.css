@@ -1,0 +1,56 @@
+/* ==========================================================
+   BADGES
+   ========================================================== */
+
+.admin-badge {
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 6px 12px;
+
+  border-radius: 999px;
+
+  font-size: .75rem;
+  font-weight: 600;
+
+  letter-spacing: .3px;
+
+}
+
+/* ==========================================================
+   COLORS
+   ========================================================== */
+
+.admin-badge-success {
+
+  background: rgba(0,245,150,.12);
+
+  color: #00F596;
+
+}
+
+.admin-badge-warning {
+
+  background: rgba(245,158,11,.12);
+
+  color: #F59E0B;
+
+}
+
+.admin-badge-danger {
+
+  background: rgba(239,68,68,.12);
+
+  color: #EF4444;
+
+}
+
+.admin-badge-info {
+
+  background: rgba(59,130,246,.12);
+
+  color: #3B82F6;
+
+}

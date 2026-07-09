@@ -1,8 +1,49 @@
 <% flash.each do |type, message| %>
 
-  <div class="flash-message <%= type %>">
+  <div
+    class="toast toast-<%= type %>"
+    data-controller="toast"
+    data-toast-delay-value="5000">
 
-    <%= message %>
+    <div class="toast-icon">
+
+      <% if type.to_s == "notice" %>
+
+        <i class="fa-solid fa-circle-check"></i>
+
+      <% else %>
+
+        <i class="fa-solid fa-circle-xmark"></i>
+
+      <% end %>
+
+    </div>
+
+    <div class="toast-content">
+
+      <h4>
+
+        <%= type.to_s == "notice" ? "Success" : "Error" %>
+
+      </h4>
+
+      <p>
+
+        <%= message %>
+
+      </p>
+
+    </div>
+
+    <button
+      type="button"
+      class="toast-close"
+      aria-label="Close notification"
+      data-action="click->toast#close">
+
+      &times;
+
+    </button>
 
   </div>
 

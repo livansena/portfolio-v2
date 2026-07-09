@@ -8,4 +8,13 @@ class PagesController < ApplicationController
     @contact = Contact.find_by(status: "published")
   end
 
+def turbo_test
+  flash.now[:notice] = "Turbo funcionando!"
+
+  respond_to do |format|
+    format.turbo_stream
+  end
 end
+
+end
+

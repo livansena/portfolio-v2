@@ -127,84 +127,9 @@
            CONTACT FORM
            ====================================================== -->
 
-      <%= form_with url: contact_path,
-                    method: :post,
-                    local: true,
-                    data: {
-                      action: "submit->contact-modal#submit"
-                    } do |form| %>
-
-        <!-- Name -->
-
-        <div class="form-group">
-
-          <%= form.label :name, "Your Name" %>
-
-          <%= form.text_field :name,
-                placeholder: "John Doe",
-                required: true %>
-
-        </div>
-
-        <!-- Email -->
-
-        <div class="form-group">
-
-          <%= form.label :email, "Your Email" %>
-
-          <%= form.email_field :email,
-                placeholder: "your@email.com",
-                required: true %>
-
-        </div>
-
-        <!-- Subject -->
-
-        <div class="form-group">
-
-          <%= form.label :subject, "Subject" %>
-
-          <%= form.text_field :subject,
-                placeholder: "How can I help you?",
-                required: true %>
-
-        </div>
-
-        <!-- Message -->
-
-        <div class="form-group">
-
-          <%= form.label :message, "Message" %>
-
-          <%= form.text_area :message,
-                rows: 6,
-                placeholder: "Write your message here...",
-                required: true %>
-
-        </div>
-
-        <!-- Actions -->
-
-        <div class="contact-modal-actions">
-
-          <button
-            type="button"
-            class="secondary-btn"
-            data-action="click->contact-modal#close">
-
-            Cancel
-
-          </button>
-
-          <%= form.submit "Send Message",
-                class: "primary-btn",
-                data: {
-                  contact_modal_target: "submitButton"
-                } %>
-
-        </div>
-
-      <% end %>
+      <div id="contact-form">
+        <%= render "pages/contact_form" %>
+      </div>
 
     </div>
 

@@ -1,0 +1,27 @@
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
+.admin-header {
+  background: #0f172a;
+  border-bottom: 1px solid #1f2937;
+  padding: 28px 40px;
+}
+
+.admin-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.admin-header p {
+  margin-top: 6px;
+  color: #94a3b8;
+  font-size: .95rem;
+}

@@ -1,0 +1,91 @@
+/* ==========================================================
+   FORM LAYOUT
+========================================================== */
+
+.admin-form-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,minmax(0,1fr));
+
+    gap:24px;
+
+    margin-bottom:28px;
+
+}
+
+.admin-form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    margin-bottom:24px;
+
+}
+
+/* ==========================================================
+   LABELS
+========================================================== */
+
+.admin-label{
+
+    font-size:.90rem;
+
+    font-weight:600;
+
+    color:#d5d9e5;
+
+}
+
+/* ==========================================================
+   INPUTS
+========================================================== */
+
+.admin-input,
+.admin-textarea,
+.admin-select{
+
+    width:100%;
+
+    background:#0f1728;
+
+    border:1px solid #2b3550;
+
+    border-radius:10px;
+
+    color:white;
+
+    padding:14px 16px;
+
+    font-size:.95rem;
+
+    transition:.25s;
+
+    outline:none;
+
+}
+
+.admin-input:focus,
+.admin-textarea:focus,
+.admin-select:focus{
+
+    border-color:#00F596;
+
+    box-shadow:0 0 0 3px rgba(0,245,150,.12);
+
+}
+
+/* ==========================================================
+   TEXTAREA
+========================================================== */
+
+.admin-textarea{
+
+    resize:vertical;
+
+    min-height:170px;
+
+}

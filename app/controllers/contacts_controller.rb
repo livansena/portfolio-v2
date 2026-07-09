@@ -9,23 +9,19 @@ class ContactsController < ApplicationController
       message: params[:message]
     ).portfolio_message.deliver_now
 
-    respond_to do |format|
-      format.turbo_stream
-      format.html do
-        redirect_to root_path(anchor: "contact"),
-                    notice: "Message sent successfully!"
-      end
-    end
+    render json: {
+      success: true,
+      message: "Thank you! Your message has been sent successfully."
+    }
 
-  rescue StandardError
+  rescue StandardError => e
 
-    respond_to do |format|
-      format.turbo_stream { render :error, status: :unprocessable_entity }
-      format.html do
-        redirect_to root_path(anchor: "contact"),
-                    alert: "Something went wrong. Please try again."
-      end
-    end
+    Rails.logger.error("[Contact] #{e.class}: #{e.message}")
+
+    render json: {
+      success: false,
+      message: "Sorry, we couldn't send your message. Please try again."
+    }, status: :unprocessable_entity
 
   end
 

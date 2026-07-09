@@ -1,0 +1,55 @@
+/* ==========================================================
+   TABLE
+   ========================================================== */
+
+.admin-table {
+
+  width: 100%;
+
+  border-collapse: collapse;
+
+  margin-top: 24px;
+
+}
+
+.admin-table thead {
+
+  background: #161B22;
+
+}
+
+.admin-table th {
+
+  padding: 18px;
+
+  text-align: left;
+
+  font-size: .85rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: .8px;
+
+  color: #8B95A7;
+
+}
+
+.admin-table td {
+
+  padding: 18px;
+
+  border-top: 1px solid #222A35;
+
+}
+
+.admin-table tbody tr {
+
+  transition: .2s;
+
+}
+
+.admin-table tbody tr:hover {
+
+  background: rgba(255,255,255,.03);
+
+}

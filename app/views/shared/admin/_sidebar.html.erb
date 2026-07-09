@@ -1,0 +1,138 @@
+<aside class="admin-sidebar">
+
+  <!-- ==========================================================
+       BRAND
+       ========================================================== -->
+
+  <div class="admin-brand">
+
+    <div class="admin-logo">
+
+      <%= image_tag "passos-studio-logo.png",
+      class: "admin-logo-image",
+      alt: "Passos Studio" %>
+
+    </div>
+
+    <div>
+
+      <h2>Passos Studio</h2>
+
+      <p>Portfolio Management</p>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==========================================================
+       MAIN MENU
+       ========================================================== -->
+
+  <nav class="admin-nav">
+
+    <span class="admin-nav-title">
+
+      Main
+
+    </span>
+
+    <%= link_to admin_root_path, class: "admin-nav-link active" do %>
+
+      <i class="fa-solid fa-house"></i>
+
+      Dashboard
+
+    <% end %>
+
+
+    <span class="admin-nav-title">
+
+      Content
+
+    </span>
+
+    <%= link_to admin_heroes_path, class: "admin-nav-link" do %>
+
+      <i class="fa-solid fa-house-user"></i>
+
+      Hero
+
+    <% end %>
+
+    <%= link_to admin_abouts_path, class: "admin-nav-link" do %>
+
+      <i class="fa-solid fa-user"></i>
+
+      About
+
+    <% end %>
+
+    <%= link_to "#", class: "admin-nav-link" do %>
+
+      <i class="fa-solid fa-briefcase"></i>
+
+      Experience
+
+    <% end %>
+
+    <%= link_to admin_skills_path, class: "admin-nav-link" do %>
+
+      <i class="fa-solid fa-code"></i>
+
+      Skills
+
+    <% end %>
+
+    <%= link_to admin_projects_path, class: "admin-nav-link" do %>
+
+      <i class="fa-solid fa-folder-open"></i>
+
+      Projects
+
+    <% end %>
+
+    <%= link_to "#", class: "admin-nav-link" do %>
+
+      <i class="fa-solid fa-sitemap"></i>
+
+      Architecture
+
+    <% end %>
+
+    <%= link_to admin_contacts_path, class: "admin-nav-link" do %>
+
+      <i class="fa-solid fa-envelope"></i>
+
+      Contact
+
+    <% end %>
+
+
+    <span class="admin-nav-title">
+
+      System
+
+    </span>
+
+    <%= link_to "#", class: "admin-nav-link" do %>
+
+      <i class="fa-solid fa-gear"></i>
+
+      Settings
+
+    <% end %>
+
+    <%= link_to root_path,
+          class: "admin-nav-link",
+          target: "_blank" do %>
+
+      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+      View Portfolio
+
+    <% end %>
+
+  </nav>
+
+</aside>

@@ -1,0 +1,51 @@
+/* ==========================================================
+   ADMIN CARD
+========================================================== */
+
+.admin-card{
+
+    background:#161b24;
+
+    border:1px solid #252d3d;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    margin-top:40px;
+
+}
+
+.admin-card-header{
+
+    margin-bottom:40px;
+
+}
+
+.admin-card-header h2{
+
+    color:#ffffff;
+
+    font-size:2rem;
+
+    margin-bottom:10px;
+
+}
+
+.admin-card-header p{
+
+    color:#8f9bb8;
+
+    font-size:1rem;
+
+    line-height:1.6;
+
+}
+
+.admin-card-body{
+
+    display:flex;
+
+    flex-direction:column;
+
+}

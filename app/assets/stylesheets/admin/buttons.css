@@ -1,0 +1,135 @@
+/* ==========================================================
+   PRIMARY BUTTON
+   ========================================================== */
+
+.admin-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 22px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #00F596;
+  color: #111827;
+
+  font-size: .95rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: all .25s ease;
+}
+
+.admin-primary-btn:hover {
+  transform: translateY(-2px);
+
+  background: #00d883;
+
+  box-shadow: 0 10px 24px rgba(0,245,150,.20);
+}
+
+.admin-primary-btn:active {
+  transform: scale(.98);
+}
+
+.admin-primary-btn:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+/* ==========================================================
+   SECONDARY BUTTON
+   ========================================================== */
+
+.admin-secondary-btn {
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 22px;
+
+  border: 1px solid #374151;
+
+  border-radius: 12px;
+
+  background: transparent;
+
+  color: #D1D5DB;
+
+  font-size: .95rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  cursor: pointer;
+
+  transition: all .25s ease;
+
+}
+
+.admin-secondary-btn:hover {
+
+  background: #1F2937;
+
+  border-color: #4B5563;
+
+  color: white;
+
+}
+
+/* ==========================================================
+   DANGER BUTTON
+   ========================================================== */
+
+.admin-danger-btn {
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 22px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #DC2626;
+
+  color: white;
+
+  font-size: .95rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all .25s ease;
+
+}
+
+.admin-danger-btn:hover {
+
+  background: #B91C1C;
+
+}
+
+/* ==========================================================
+   FORM ACTIONS
+   ========================================================== */
+
+.admin-form-actions {
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 16px;
+
+  margin-top: 40px;
+
+}

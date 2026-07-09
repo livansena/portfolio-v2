@@ -8,17 +8,12 @@ export default class extends Controller {
   ]
 
   connect() {
-
     this.closeOnEscape = this.closeOnEscape.bind(this)
-
     document.addEventListener("keydown", this.closeOnEscape)
-
   }
 
   disconnect() {
-
     document.removeEventListener("keydown", this.closeOnEscape)
-
   }
 
   // ==========================================================
@@ -26,62 +21,75 @@ export default class extends Controller {
   // ==========================================================
 
   open() {
-
     this.modalTarget.classList.add("active")
-
   }
 
   close() {
-
     this.modalTarget.classList.remove("active")
-
-    this.resetButton()
-
   }
 
   closeBackground(event) {
-
     if (event.target === this.modalTarget) {
-
       this.close()
-
     }
-
   }
 
   closeOnEscape(event) {
-
     if (event.key === "Escape") {
-
       this.close()
+    }
+  }
+
+  // ==========================================================
+  // SUBMIT
+  // ==========================================================
+
+  submitStart() {
+
+  this.submitButtonTarget.disabled = true
+  this.submitButtonTarget.value = "Sending..."
+
+}
+  
+  submitEnd(event) {
+
+  const { success } = event.detail
+
+  this.submitButtonTarget.disabled = false
+  this.submitButtonTarget.value = "Send Message"
+
+  if (success) {
+
+    event.target.reset()
+
+    this.close()
 
     }
 
   }
 
   // ==========================================================
-  // FORM
+  // TOAST
   // ==========================================================
 
-  submit() {
+  showToast(message, type) {
 
-    this.loading()
+    const toast = document.createElement("div")
 
-  }
+    toast.className = `toast toast-${type}`
 
-  loading() {
+    toast.innerHTML = `
+      <div class="toast-content">
+        <strong>${type === "success" ? "Success" : "Error"}</strong>
+        <p>${message}</p>
+      </div>
+    `
 
-    this.submitButtonTarget.disabled = true
+    document.body.appendChild(toast)
 
-    this.submitButtonTarget.value = "Sending..."
-
-  }
-
-  resetButton() {
-
-    this.submitButtonTarget.disabled = false
-
-    this.submitButtonTarget.value = "Send Message"
+    setTimeout(() => {
+      toast.remove()
+    }, 5000)
 
   }
 

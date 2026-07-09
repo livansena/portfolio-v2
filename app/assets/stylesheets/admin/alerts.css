@@ -1,0 +1,43 @@
+/* ==========================================================
+   ALERT
+   ========================================================== */
+
+.admin-alert {
+
+  padding: 18px 20px;
+
+  border-radius: 14px;
+
+  margin-bottom: 24px;
+
+}
+
+.admin-alert-success {
+
+  background: rgba(0,245,150,.10);
+
+  border: 1px solid rgba(0,245,150,.25);
+
+  color: #00F596;
+
+}
+
+.admin-alert-warning {
+
+  background: rgba(245,158,11,.10);
+
+  border: 1px solid rgba(245,158,11,.25);
+
+  color: #F59E0B;
+
+}
+
+.admin-alert-danger {
+
+  background: rgba(239,68,68,.10);
+
+  border: 1px solid rgba(239,68,68,.25);
+
+  color: #EF4444;
+
+}

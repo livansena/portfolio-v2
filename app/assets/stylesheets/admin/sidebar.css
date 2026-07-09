@@ -1,0 +1,110 @@
+/* ==========================================================
+   SIDEBAR
+   ========================================================== */
+
+.admin-sidebar {
+  width: 280px;
+  min-height: 100vh;
+
+  background: #111827;
+  border-right: 1px solid #1f2937;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 32px 24px;
+}
+
+/* ==========================================================
+   BRAND
+   ========================================================== */
+
+.admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin-bottom: 48px;
+}
+
+.admin-logo {
+  width: 52px;
+  height: 52px;
+
+  border-radius: 14px;
+
+  background: #00F596;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #111827;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.admin-brand h2 {
+  font-size: 1.1rem;
+  color: white;
+}
+
+.admin-brand p {
+  font-size: .85rem;
+  color: #9CA3AF;
+}
+
+/* ==========================================================
+   NAVIGATION
+   ========================================================== */
+
+.admin-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-nav-title {
+  margin:
+    28px 0 12px;
+
+  font-size: .75rem;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  color: #6B7280;
+}
+
+.admin-nav-link {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 14px 16px;
+
+  margin-bottom: 6px;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+
+  color: #D1D5DB;
+
+  transition: .25s;
+}
+
+.admin-nav-link:hover {
+  background: #1F2937;
+  color: white;
+}
+
+.admin-nav-link.active {
+  background: #00F596;
+  color: #111827;
+}
+
+.admin-nav-link i {
+  width: 20px;
+  text-align: center;
+}
